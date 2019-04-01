@@ -1,0 +1,3 @@
+[submodule "Pod-Resource"]
+	path = Pod-Resource
+	url = https://github.com/swlfigo/Pod-Resource.git
