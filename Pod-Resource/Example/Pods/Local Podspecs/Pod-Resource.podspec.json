@@ -1,0 +1,27 @@
+{
+  "name": "Pod-Resource",
+  "version": "0.1.0",
+  "summary": "A short description of Pod-Resource.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/swlfigo/Pod-Resource",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "swlfigo": "swlfigo@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/swlfigo/Pod-Resource.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Pod-Resource/Classes/**/*",
+  "resource_bundles": {
+    "Pod-Resource": [
+      "Pod-Resource/Assets/**/*.xcassets"
+    ]
+  }
+}

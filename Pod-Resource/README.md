@@ -1,0 +1,29 @@
+# Pod-Resource
+
+[![CI Status](https://img.shields.io/travis/swlfigo/Pod-Resource.svg?style=flat)](https://travis-ci.org/swlfigo/Pod-Resource)
+[![Version](https://img.shields.io/cocoapods/v/Pod-Resource.svg?style=flat)](https://cocoapods.org/pods/Pod-Resource)
+[![License](https://img.shields.io/cocoapods/l/Pod-Resource.svg?style=flat)](https://cocoapods.org/pods/Pod-Resource)
+[![Platform](https://img.shields.io/cocoapods/p/Pod-Resource.svg?style=flat)](https://cocoapods.org/pods/Pod-Resource)
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Requirements
+
+## Installation
+
+Pod-Resource is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'Pod-Resource'
+```
+
+## Author
+
+swlfigo, swlfigo@gmail.com
+
+## License
+
+Pod-Resource is available under the MIT license. See the LICENSE file for more info.
