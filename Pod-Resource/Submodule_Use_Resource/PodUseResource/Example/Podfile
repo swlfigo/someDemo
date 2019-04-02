@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'PodUseResource_Example' do
+  pod 'PodUseResource', :path => '../'
+
+  target 'PodUseResource_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

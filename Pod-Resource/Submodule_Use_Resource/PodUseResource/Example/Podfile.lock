@@ -1,0 +1,16 @@
+PODS:
+  - PodUseResource (0.1.0)
+
+DEPENDENCIES:
+  - PodUseResource (from `../`)
+
+EXTERNAL SOURCES:
+  PodUseResource:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PodUseResource: 194167531db8caaae5d5f831be200f15ebbaf7a1
+
+PODFILE CHECKSUM: 82f4854b492b29c3c3e5468f0b17ab2d54c9e396
+
+COCOAPODS: 1.5.3

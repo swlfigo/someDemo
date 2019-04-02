@@ -22,9 +22,11 @@
     [self.view addSubview:self.imageView];
     
     //需要硬编码模式读取
-    NSString *bundlePath = [[NSBundle bundleForClass:[self class]].resourcePath stringByAppendingString:@"/Pod-Resource.bundle"];
+//    NSString *bundlePath = [[NSBundle bundleForClass:[self class]].resourcePath stringByAppendingString:@"/Pod-Resource.bundle"];
+    NSString *bundlePath = [[NSBundle bundleForClass:[self class]].resourcePath stringByAppendingString:@"/Pod-Resource2.bundle"];
+    
     NSBundle *resource_bundle = [NSBundle bundleWithPath:bundlePath];
-    UIImage *image = [UIImage imageNamed:@"firstLoading" inBundle:resource_bundle compatibleWithTraitCollection:nil];
+    UIImage *image = [UIImage imageNamed:@"secondLoading" inBundle:resource_bundle compatibleWithTraitCollection:nil];
     self.imageView.image = image;
     
 }
@@ -34,6 +36,8 @@
     self.imageView.frame = self.view.bounds;
     
 }
+
+
 
 
 @end

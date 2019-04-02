@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint Pod-Resource.podspec' to ensure this is a
+# Be sure to run `pod lib lint PodUseResource.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'Pod-Resource'
+  s.name             = 'PodUseResource'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of Pod-Resource.'
+  s.summary          = 'A short description of PodUseResource.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,21 +21,23 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/swlfigo/Pod-Resource'
+  s.homepage         = 'https://github.com/swlfigo/PodUseResource'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'swlfigo' => 'swlfigo@gmail.com' }
-  s.source           = { :git => 'https://github.com/swlfigo/Pod-Resource.git', :tag => s.version.to_s }
+  s.author           = { 'swlfigo' => '403482009@qq.com' }
+  s.source           = { :git => 'https://github.com/swlfigo/PodUseResource.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Pod-Resource/Classes/**/*'
+  s.source_files = 'PodUseResource/Classes/**/*'
   
-  s.resource_bundles = {
-    'Pod-Resource1' => ['Pod-Resource/Assets/submodule1/*.xcassets'],
-    'Pod-Resource2' => ['Pod-Resource/Assets/submodule2/*.xcassets'],
-  }
+  s.resource =  ['PodUseResource/Assets/**/*.xcassets']
+  
+
+  # s.resource_bundles = {
+  #   'PodUseResource' => ['PodUseResource/Assets/*.png']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

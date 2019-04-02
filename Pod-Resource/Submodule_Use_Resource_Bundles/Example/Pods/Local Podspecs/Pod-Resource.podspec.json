@@ -20,8 +20,11 @@
   },
   "source_files": "Pod-Resource/Classes/**/*",
   "resource_bundles": {
-    "Pod-Resource": [
-      "Pod-Resource/Assets/**/*.xcassets"
+    "Pod-Resource1": [
+      "Pod-Resource/Assets/submodule1/*.xcassets"
+    ],
+    "Pod-Resource2": [
+      "Pod-Resource/Assets/submodule2/*.xcassets"
     ]
   }
 }
