@@ -74,4 +74,9 @@
     completionHandler(NCUpdateResultNewData);
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.extensionContext openURL:[NSURL URLWithString:@"TodayExtensionDemo://"] completionHandler:nil];
+}
+
 @end

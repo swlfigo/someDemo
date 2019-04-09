@@ -14,17 +14,21 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Reveal-SDK (20)
 
 DEPENDENCIES:
   - AFNetworking
+  - Reveal-SDK (= 20.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Reveal-SDK
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Reveal-SDK: 43206a57f575632fd304e85385cc259b5d359e32
 
-PODFILE CHECKSUM: dc940a9949c2d9816cf1f27856352e261533874e
+PODFILE CHECKSUM: ed7a52f25a025891ecf987e0d81850d54c1c61a5
 
 COCOAPODS: 1.5.3
