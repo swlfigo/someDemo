@@ -1,0 +1,16 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+def shareFramework
+    pod 'AFNetworking'
+    pod 'Reveal-SDK', '20.0', :configurations => ['Debug']
+    #blablabla Framework
+end
+
+target 'TodayExtentsionDemo' do
+    shareFramework
+end
+target 'TodayExtentsion' do
+    shareFramework
+end
