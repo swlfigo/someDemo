@@ -1,0 +1,4 @@
+target ‘CollectionViewDragDemo’ do
+    pod 'YYKit'
+    pod 'Masonry'
+end
