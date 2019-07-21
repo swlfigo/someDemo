@@ -1,0 +1,4 @@
+
+target 'douyinDemo' do
+    pod 'KTVHTTPCache'
+end
