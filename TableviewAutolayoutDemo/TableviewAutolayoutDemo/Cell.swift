@@ -56,7 +56,6 @@ class Style1Cell : UITableViewCell {
     private func setupUI(){
         contentView.addSubview(contentLabel)
         contentLabel.numberOfLines = 0
-        
 
         contentLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(gap)
@@ -64,7 +63,8 @@ class Style1Cell : UITableViewCell {
             make.top.equalToSuperview().offset(100)
             make.bottom.equalToSuperview().offset(-10).priority(.high)
         }
-
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
         
     }
     
