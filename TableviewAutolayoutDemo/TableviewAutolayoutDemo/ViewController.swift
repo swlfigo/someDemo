@@ -20,13 +20,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        dataSource = Array(repeating:  Style2Wrapper(), count: 20)
         do {
             let attr1 = generateAttribute()
             let wrapperModel = Style1Wrapper(attributeStr: attr1)
-            dataSource.append(wrapperModel)
+            dataSource[1] = wrapperModel
         }
-        
+        do {
+            let attr1 = generateAttribute()
+            let wrapperModel = Style1Wrapper(attributeStr: attr1)
+            dataSource[3] = wrapperModel
+        }
+       
         
         self.view.addSubview(tbView)
         tbView.snp.makeConstraints { make in
