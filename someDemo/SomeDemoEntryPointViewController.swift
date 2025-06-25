@@ -19,7 +19,8 @@ class SomeDemoEntryPointViewController: UIViewController {
         DemoVCInitialParams(
             name: "TableViewAutoLayout",
             vc: UITableViewAutolayoutDemoViewController()
-        )
+        ),
+        DemoVCInitialParams(name: "TableView Diff", vc: UITableViewDiffableDataSourceDemoViewController())
     ]
 
     override func viewDidLoad() {

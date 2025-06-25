@@ -19,6 +19,8 @@
 		2C71EA712E0A9F960058ED39 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2C71EA702E0A9F960058ED39 /* SnapKit */; };
 		2C71EA742E0AA4DD0058ED39 /* UITableViewAutolayoutDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C71EA732E0AA4DD0058ED39 /* UITableViewAutolayoutDemoViewController.swift */; };
 		2C71EA772E0AA5120058ED39 /* UITableviewAutoLayoutDemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C71EA762E0AA5120058ED39 /* UITableviewAutoLayoutDemoCell.swift */; };
+		2C7C9E342E0B9B8000D47A96 /* UITableViewDiffableDataSourceDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C9E332E0B9B8000D47A96 /* UITableViewDiffableDataSourceDemoViewController.swift */; };
+		2C7C9E362E0BCB9A00D47A96 /* UITableViewDiffableDataSourceExpandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C9E352E0BCB9A00D47A96 /* UITableViewDiffableDataSourceExpandCell.swift */; };
 		F4D830B9E69E80953170A636 /* Pods_someDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97604C504FFAE2BB867F4CB8 /* Pods_someDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		2C71EA6D2E0A9EA90058ED39 /* SomeDemoBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeDemoBaseViewController.swift; sourceTree = "<group>"; };
 		2C71EA732E0AA4DD0058ED39 /* UITableViewAutolayoutDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewAutolayoutDemoViewController.swift; sourceTree = "<group>"; };
 		2C71EA762E0AA5120058ED39 /* UITableviewAutoLayoutDemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableviewAutoLayoutDemoCell.swift; sourceTree = "<group>"; };
+		2C7C9E332E0B9B8000D47A96 /* UITableViewDiffableDataSourceDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewDiffableDataSourceDemoViewController.swift; sourceTree = "<group>"; };
+		2C7C9E352E0BCB9A00D47A96 /* UITableViewDiffableDataSourceExpandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewDiffableDataSourceExpandCell.swift; sourceTree = "<group>"; };
 		97604C504FFAE2BB867F4CB8 /* Pods_someDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_someDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95B6D8D530535203806E7DB /* Pods-someDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-someDemo.debug.xcconfig"; path = "Target Support Files/Pods-someDemo/Pods-someDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DB676F00E1DD2419D1AA2D7A /* Pods-someDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-someDemo.release.xcconfig"; path = "Target Support Files/Pods-someDemo/Pods-someDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				2C71EA6D2E0A9EA90058ED39 /* SomeDemoBaseViewController.swift */,
 				2C71EA542E0A9B390058ED39 /* MetalTriangleDemo */,
 				2C71EA722E0AA4A50058ED39 /* UITableviewAutoLayout */,
+				2C7C9E322E0B9A4800D47A96 /* UITableViewDiffableDataSourceDemo */,
 				2C71EA432E0A9AC50058ED39 /* AppDelegate.swift */,
 				2C71EA442E0A9AC50058ED39 /* Assets.xcassets */,
 				2C71EA452E0A9AC50058ED39 /* Info.plist */,
@@ -105,6 +110,15 @@
 				2C71EA762E0AA5120058ED39 /* UITableviewAutoLayoutDemoCell.swift */,
 			);
 			path = UITableviewAutoLayout;
+			sourceTree = "<group>";
+		};
+		2C7C9E322E0B9A4800D47A96 /* UITableViewDiffableDataSourceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2C7C9E332E0B9B8000D47A96 /* UITableViewDiffableDataSourceDemoViewController.swift */,
+				2C7C9E352E0BCB9A00D47A96 /* UITableViewDiffableDataSourceExpandCell.swift */,
+			);
+			path = UITableViewDiffableDataSourceDemo;
 			sourceTree = "<group>";
 		};
 		8A029AE3602BB4A9F6A39ABD /* Pods */ = {
@@ -256,6 +270,8 @@
 				2C71EA772E0AA5120058ED39 /* UITableviewAutoLayoutDemoCell.swift in Sources */,
 				2C71EA522E0A9AC50058ED39 /* SceneDelegate.swift in Sources */,
 				2C71EA532E0A9AC50058ED39 /* SomeDemoEntryPointViewController.swift in Sources */,
+				2C7C9E342E0B9B8000D47A96 /* UITableViewDiffableDataSourceDemoViewController.swift in Sources */,
+				2C7C9E362E0BCB9A00D47A96 /* UITableViewDiffableDataSourceExpandCell.swift in Sources */,
 				2C71EA582E0A9B910058ED39 /* MetalTriangleDemoViewController.swift in Sources */,
 				2C71EA742E0AA4DD0058ED39 /* UITableViewAutolayoutDemoViewController.swift in Sources */,
 			);
