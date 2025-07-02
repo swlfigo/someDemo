@@ -21,7 +21,8 @@ class SomeDemoEntryPointViewController: UIViewController {
             vc: UITableViewAutolayoutDemoViewController()
         ),
         DemoVCInitialParams(name: "TableView Diff", vc: UITableViewDiffableDataSourceDemoViewController()),
-        DemoVCInitialParams(name: "TagView", vc: UICollectionViewTagViewController())
+        DemoVCInitialParams(name: "TagView", vc: UICollectionViewTagViewController()),
+        DemoVCInitialParams(name: "UICollectionViewAutoLayout", vc: UICollectionviewAutoLayoutViewController())
     ]
 
     override func viewDidLoad() {
