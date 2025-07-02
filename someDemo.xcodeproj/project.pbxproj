@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1EF56F2E14D567008030AC /* UICollectionViewTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1EF56E2E14D567008030AC /* UICollectionViewTagViewController.swift */; };
 		2C71EA4D2E0A9AC50058ED39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C71EA442E0A9AC50058ED39 /* Assets.xcassets */; };
 		2C71EA4F2E0A9AC50058ED39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C71EA472E0A9AC50058ED39 /* LaunchScreen.storyboard */; };
 		2C71EA502E0A9AC50058ED39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C71EA492E0A9AC50058ED39 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C1EF56E2E14D567008030AC /* UICollectionViewTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewTagViewController.swift; sourceTree = "<group>"; };
 		2C71EA1B2E0A9AAB0058ED39 /* someDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = someDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C71EA432E0A9AC50058ED39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C71EA442E0A9AC50058ED39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C1EF56D2E14D546008030AC /* UICollectionViewTagView */ = {
+			isa = PBXGroup;
+			children = (
+				2C1EF56E2E14D567008030AC /* UICollectionViewTagViewController.swift */,
+			);
+			path = UICollectionViewTagView;
+			sourceTree = "<group>";
+		};
 		2C71EA122E0A9AAB0058ED39 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 				2C71EA542E0A9B390058ED39 /* MetalTriangleDemo */,
 				2C71EA722E0AA4A50058ED39 /* UITableviewAutoLayout */,
 				2C7C9E322E0B9A4800D47A96 /* UITableViewDiffableDataSourceDemo */,
+				2C1EF56D2E14D546008030AC /* UICollectionViewTagView */,
 				2C71EA432E0A9AC50058ED39 /* AppDelegate.swift */,
 				2C71EA442E0A9AC50058ED39 /* Assets.xcassets */,
 				2C71EA452E0A9AC50058ED39 /* Info.plist */,
@@ -264,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1EF56F2E14D567008030AC /* UICollectionViewTagViewController.swift in Sources */,
 				2C71EA6E2E0A9EB30058ED39 /* SomeDemoBaseViewController.swift in Sources */,
 				2C71EA562E0A9B6F0058ED39 /* shader.metal in Sources */,
 				2C71EA512E0A9AC50058ED39 /* AppDelegate.swift in Sources */,
