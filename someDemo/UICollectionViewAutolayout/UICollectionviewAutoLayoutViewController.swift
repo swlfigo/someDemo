@@ -67,6 +67,9 @@ class UICollectionviewAutoLayoutViewController: SomeDemoBaseViewController {
         collectionView.frame = view.frame
     }
     
+    deinit {
+        print("Collection Autolayout VC Deinit")
+    }
 }
 
 

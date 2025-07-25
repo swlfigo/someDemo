@@ -14,15 +14,15 @@ class SomeDemoEntryPointViewController: UIViewController {
     private let source: [DemoVCInitialParams] = [
         DemoVCInitialParams(
             name: "Metal三角形",
-            vc: MetalTriangleDemoViewController()
+            vcCls: "UITableViewAutolayoutDemoViewController"
         ),
         DemoVCInitialParams(
             name: "TableViewAutoLayout",
-            vc: UITableViewAutolayoutDemoViewController()
+            vcCls: "UITableViewAutolayoutDemoViewController"
         ),
-        DemoVCInitialParams(name: "TableView Diff", vc: UITableViewDiffableDataSourceDemoViewController()),
-        DemoVCInitialParams(name: "TagView", vc: UICollectionViewTagViewController()),
-        DemoVCInitialParams(name: "UICollectionViewAutoLayout", vc: UICollectionviewAutoLayoutViewController())
+        DemoVCInitialParams(name: "TableView Diff", vcCls: "UITableViewDiffableDataSourceDemoViewController"),
+        DemoVCInitialParams(name: "TagView", vcCls: "UICollectionViewTagViewController"),
+        DemoVCInitialParams(name: "UICollectionViewAutoLayout", vcCls: "UICollectionviewAutoLayoutViewController")
     ]
 
     override func viewDidLoad() {
@@ -66,8 +66,16 @@ extension SomeDemoEntryPointViewController: UITableViewDataSource,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vcParam = source[indexPath.row]
-        let vc = vcParam.vc
-        vc.paramDic = vcParam.params
-        navigationController?.pushViewController(vc, animated: true)
+        
+        let moduleName = Bundle.main.infoDictionary!["CFBundleName"] as! String
+        let cls:AnyClass? = NSClassFromString("\(moduleName).\(vcParam.vcCls)")
+        // 将AnyClass转为指定的类型
+        if let vcCls = cls as? SomeDemoBaseViewController.Type {
+            let vc = vcCls.init()
+            vc.paramDic = vcParam.params
+            navigationController?.pushViewController(vc, animated: true)
+        }
+
+        
     }
 }

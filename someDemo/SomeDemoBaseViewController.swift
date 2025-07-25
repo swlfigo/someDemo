@@ -10,7 +10,7 @@ import UIKit
 
 struct DemoVCInitialParams {
     let name: String
-    let vc: SomeDemoBaseViewController
+    let vcCls : String
     var params: [String: Any] = [:]
 }
 
