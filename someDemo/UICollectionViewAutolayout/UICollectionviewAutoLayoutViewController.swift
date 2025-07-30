@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 
+//自适应Cell
+//参考https://github.com/danmunoz/self-sizing-hell/blob/master/Self-Sizing-Hell-Square/Classes/CollectionViewCell.swift
+
 private enum CellType {
     case text(String)
     case constText(String)
@@ -33,6 +36,13 @@ class UICollectionviewAutoLayoutViewController: SomeDemoBaseViewController {
         // 构造多种类型和高度的cell数据
         items = [
             Item(type: .text("短文本")),
+            Item(type: .text("短文本")),
+            Item(type: .text("短文本")),
+            Item(type: .text("短文本")),
+            Item(type: .text("短文本")),
+            Item(type: .text("短文本")),
+            Item(type: .text("短文本")),
+            Item(type: .text("短文本")),
             Item(type: .constText("定高150Cell")),
             Item(type: .text("这是一个很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的文本，用于测试AutoLayout下的高度自适应。再加一段：Swift UICollectionView 自动布局，label自动换行，cell高度自适应，效果如UITableView。再加一段：如果你看到这段文字说明label已经自动换行并且cell高度自适应了。")),
             Item(type: .imageWithText(UIImage(systemName: "star")!, "Image With Text")),
@@ -47,6 +57,7 @@ class UICollectionviewAutoLayoutViewController: SomeDemoBaseViewController {
         layout.scrollDirection = .vertical
         //需要设置为AutomaticSize
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        
 //        layout.itemSize = CGSizeMake(view.frame.size.width, 100)
         layout.minimumLineSpacing = 20
         layout.sectionInset = UIEdgeInsets(top: 20, left: 16, bottom: 20, right: 16)
@@ -76,6 +87,15 @@ class UICollectionviewAutoLayoutViewController: SomeDemoBaseViewController {
 
 
 extension UICollectionviewAutoLayoutViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize.init(width: collectionView.frame.size.width, height: 300)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -117,7 +137,9 @@ private class ConstantHeightTextCell : UICollectionViewCell {
             make.trailing.equalToSuperview().offset(-12)
         }
         widthConstraint = contentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width)
-        widthConstraint?.isActive = false
+        widthConstraint?.isActive = true
+        // Needed to avoid the `UIView-Encapsulated-Layout-Width` issue
+        widthConstraint?.priority = .required - 1
     }
     
     
@@ -133,10 +155,11 @@ private class ConstantHeightTextCell : UICollectionViewCell {
             let width = collectionView.bounds.width - sectionInset.left - sectionInset.right
             widthConstraint?.constant = width
             widthConstraint?.isActive = true
-            
+            widthConstraint?.priority = .required - 1
             //写死高度
             var cellFrame = layoutAttributes.frame
             cellFrame.size.height = 150
+            cellFrame.size.width = width
             layoutAttributes.frame = cellFrame
         }
         return super.preferredLayoutAttributesFitting(layoutAttributes)
@@ -162,7 +185,9 @@ private class TextCell: UICollectionViewCell {
             make.bottom.equalToSuperview().offset(-20).priority(.high)
         }
         widthConstraint = contentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width)
-        widthConstraint?.isActive = false
+        widthConstraint?.isActive = true
+        // Needed to avoid the `UIView-Encapsulated-Layout-Width` issue
+        widthConstraint?.priority = .required - 1
     }
     
     
@@ -178,6 +203,10 @@ private class TextCell: UICollectionViewCell {
             let width = collectionView.bounds.width - sectionInset.left - sectionInset.right
             widthConstraint?.constant = width
             widthConstraint?.isActive = true
+            widthConstraint?.priority = .required - 1
+            var cellFrame = layoutAttributes.frame
+            cellFrame.size.width = width
+            layoutAttributes.frame = cellFrame
         }
         return super.preferredLayoutAttributesFitting(layoutAttributes)
     }
@@ -210,6 +239,7 @@ private class ImageCell: UICollectionViewCell {
         //先设置为大于上面约束-12 12 的宽度
         widthConstraint = contentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width)
         widthConstraint?.isActive = false
+        widthConstraint?.priority = .required - 1
     }
     
     @available(*, unavailable)
@@ -223,6 +253,11 @@ private class ImageCell: UICollectionViewCell {
             let width = collectionView.bounds.width - sectionInset.left - sectionInset.right
             widthConstraint?.constant = width
             widthConstraint?.isActive = true
+            // Needed to avoid the `UIView-Encapsulated-Layout-Width` issue
+            widthConstraint?.priority = .required - 1
+            var cellFrame = layoutAttributes.frame
+            cellFrame.size.width = width
+            layoutAttributes.frame = cellFrame
         }
         return super.preferredLayoutAttributesFitting(layoutAttributes)
     }
