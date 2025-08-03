@@ -20,6 +20,7 @@ class SomeDemoEntryPointViewController: UIViewController {
             name: "TableViewAutoLayout",
             vcCls: "UITableViewAutolayoutDemoViewController"
         ),
+        DemoVCInitialParams(name: "TableView Diff Reload", vcCls: "UITableViewDiffableDataSourceReloadViewController"),
         DemoVCInitialParams(name: "TableView Diff", vcCls: "UITableViewDiffableDataSourceDemoViewController"),
         DemoVCInitialParams(name: "TagView", vcCls: "UICollectionViewTagViewController"),
         DemoVCInitialParams(name: "UICollectionViewAutoLayout", vcCls: "UICollectionviewAutoLayoutViewController")
